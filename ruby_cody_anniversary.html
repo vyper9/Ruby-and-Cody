@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b0e">
+<title>RUBY × CODY // EST. 2025</title>
+<style>
+:root{--bg:#090b0e;--panel:#14181e;--panel2:#1b2028;--red:#d51e35;--red2:#ff304b;--white:#f1f2f4;--muted:#a5aab3;--line:#414955}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#29313d 0%,transparent 48%),var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.12;background:repeating-linear-gradient(135deg,transparent 0 7px,#fff 8px,transparent 9px)}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:center;flex-wrap:wrap;gap:18px;padding:15px 10px;background:#080a0def;border-bottom:2px solid var(--red)}
+nav a{color:#d8dbe0;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}nav a:hover{color:var(--red2)}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 20px;background:linear-gradient(#07090b99,#07090bf2),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800&auto=format&fit=crop') center/cover;border-bottom:2px solid var(--red)}
+.kicker,.section-number{font-family:monospace;color:var(--red2);font-weight:bold;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(44px,10vw,100px);line-height:.98;font-style:italic;font-weight:1000;letter-spacing:-4px;text-transform:uppercase;text-shadow:5px 5px 0 #64101f;margin:18px 0}
+h1 span{color:var(--red2)}h2{font-size:clamp(29px,6vw,51px);font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:-1px;margin:12px 0}h3{color:var(--red2);text-transform:uppercase;letter-spacing:1.5px}
+.subtitle{max-width:600px;color:#e0e2e6;line-height:1.8;font-size:16px}.date-stamp{font-family:monospace;color:#ff6478;letter-spacing:4px;margin-top:18px}
+.primary{display:inline-block;background:var(--red);color:white;border:0;border-bottom:4px solid #780f20;padding:15px 23px;margin-top:20px;font-weight:900;letter-spacing:2px;text-decoration:none;cursor:pointer;transition:.2s}.primary:hover{background:var(--red2);transform:translateY(-2px)}
+section{max-width:960px;margin:auto;padding:72px 22px;text-align:center}.description{max-width:650px;margin:15px auto 30px;color:var(--muted);line-height:1.85}
+.panel{background:linear-gradient(135deg,var(--panel2),#101318);border:1px solid var(--line);border-left:4px solid var(--red);padding:25px;margin:17px 0;text-align:left;box-shadow:0 12px 35px #0007}.panel p{color:#c3c7ce;line-height:1.7}
+.countdown{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:28px 0}.time{min-width:85px;padding:18px 12px;background:#171b22;border:1px solid #555d69;border-bottom:3px solid var(--red)}.time strong{display:block;color:var(--red2);font: bold 32px monospace}.time small{font:10px monospace;letter-spacing:2px;color:var(--muted)}
+.timeline{max-width:600px;margin:35px auto;border-left:3px solid var(--red);text-align:left}.event{position:relative;padding:4px 0 24px 25px}.event:before{content:"◆";position:absolute;left:-9px;color:var(--red2);background:var(--bg)}.event p{color:var(--muted);line-height:1.7}.event h3{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}.tile{min-height:175px;padding:22px;text-align:left;background:linear-gradient(145deg,#202630,#11151a);border:1px solid #4b5360;border-bottom:3px solid var(--red)}.tile .symbol{font-size:28px}.tile p{color:var(--muted);line-height:1.65}
+.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}.tag{background:#191e25;border:1px solid #515966;border-bottom:3px solid var(--red);padding:12px 16px;color:#eee;font-weight:bold}
+.secret{display:none;background:#171b22;border:1px solid var(--red);padding:20px;margin-top:14px;line-height:1.8;color:#e4e6e9}.secret.show{display:block}
+.hearts,.quiz-options{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}.heart-button,.quiz-options button{background:#191e25;color:white;border:1px solid #555e6b;border-bottom:3px solid var(--red);padding:13px 18px;cursor:pointer}.heart-button{font-size:25px}.heart-button:hover,.quiz-options button:hover{background:#78172a}
+.letter{background:#171b22;border:1px solid #5b6471;border-left:4px solid var(--red);padding:25px;text-align:left;line-height:2;color:#e6e8eb}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:13px}.gallery img{width:100%;height:180px;object-fit:cover;border:2px solid #555e6b;border-bottom:4px solid var(--red)}
+.upload{display:block;margin:20px auto;color:#ddd;max-width:100%}
+footer{text-align:center;background:#101318;border-top:3px solid var(--red);padding:42px 20px;color:var(--muted);line-height:2}footer span{color:var(--red2)}.small{font-size:12px;color:#9299a4}
+@media(max-width:520px){nav{gap:11px}nav a{font-size:9px}.panel{padding:19px 15px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#home">Home</a><a href="#countdown">Countdown</a><a href="#story">Our story</a><a href="#garage">His world</a><a href="#soundtrack">Soundtrack</a><a href="#memories">Memories</a><a href="#secrets">Secrets</a><a href="#letter">Final file</a>
+</nav>
+
+<header class="hero" id="home">
+<div class="kicker">PRIVATE TRANSMISSION // RUBY TO CODY</div>
+<h1>RUBY <span>×</span> CODY</h1>
+<p class="subtitle">One year. Countless memories. Same team, next chapter.<br>A little world built for the person who means so much to me.</p>
+<div class="date-stamp">EST. NOVEMBER 05, 2025</div>
+<a class="primary" href="#countdown">START THE ENGINE ♥</a>
+</header>
+
+<section id="countdown">
+<div class="section-number">01 // ANNIVERSARY STATUS</div><h2>ONE YEAR. ONE TEAM.</h2>
+<p class="description">November 5, 2025 was the start of our story. Here's to everything we've shared and all the memories still ahead.</p>
+<div class="panel" style="text-align:center">
+<div class="kicker" id="countdown-title">NEXT ANNIVERSARY</div>
+<div class="countdown"><div class="time"><strong id="days">000</strong><small>DAYS</small></div><div class="time"><strong id="hours">00</strong><small>HOURS</small></div><div class="time"><strong id="minutes">00</strong><small>MINUTES</small></div><div class="time"><strong id="seconds">00</strong><small>SECONDS</small></div></div>
+<p id="together"></p><p class="small">The countdown uses your device's local time.</p>
+</div></section>
+
+<section id="story"><div class="section-number">02 // OUR HISTORY</div><h2>THE STORY SO FAR</h2><p class="description">Every great run has a starting line. This one's ours. Add your own specific milestones before sharing.</p>
+<div class="timeline">
+<div class="event"><h3>05 NOV 2025 // GREEN LIGHT</h3><p>The day we officially became us. The start of a year of conversations, laughs, games, music, and memories.</p></div>
+<div class="event"><h3>THE LATE-NIGHT SESSIONS</h3><p>All the calls, messages, jokes, and little moments that made the distance feel smaller.</p></div>
+<div class="event"><h3>THE MEMORIES WE KEEP</h3><p>The screenshots, favorite songs, games, and moments I wish I could replay.</p></div>
+<div class="event"><h3>05 NOV 2026 // ONE YEAR</h3><p>One year down. A new chapter starts here.</p></div>
+</div></section>
+
+<section id="garage"><div class="section-number">03 // CODY'S WORLD</div><h2>THE GARAGE // THE DROP ZONE</h2><p class="description">A little tribute to the things you love. Different worlds, same favorite person.</p>
+<div class="grid">
+<div class="tile"><div class="symbol">🏎️</div><h3>THE GARAGE</h3><p>Drift cars, builds, engines, and the cars that make you stop scrolling. Every road is better with you along for the ride.</p></div>
+<div class="tile"><div class="symbol">🏁</div><h3>RACE DAY</h3><p>NASCAR, track lights, speed, and the noise of race day. My favorite teammate is still you.</p></div>
+<div class="tile"><div class="symbol">🪖</div><h3>HELLDIVERS // MISSION FILE</h3><p>MISSION: Celebrate one year together. SQUAD: Ruby + Cody. OBJECTIVE: Keep making memories. STATUS: A pretty great team.</p></div>
+<div class="tile"><div class="symbol">🎮</div><h3>READY OR NOT // CASE FILE</h3><p>FILE: CODY. CLASSIFICATION: One of Ruby's favorite people. EVIDENCE: A whole year of memories and counting.</p></div>
+</div></section>
+
+<section id="soundtrack"><div class="section-number">04 // THE SOUNDTRACK</div><h2>LOUD MUSIC. LOUDER MEMORIES.</h2><p class="description">Our music taste has a little bit of everything. These are some of the artists that belong on our soundtrack.</p>
+<div class="tags"><span class="tag">SLIPKNOT</span><span class="tag">LINKIN PARK</span><span class="tag">LIL WAYNE</span><span class="tag">TRIPPIE REDD</span><span class="tag">LIL DARKIE</span><span class="tag">JUICE WRLD</span><span class="tag">NBA YOUNGBOY</span><span class="tag">DON TOLIVER</span></div>
+<div class="panel" style="text-align:center"><h3>OUR SHARED PLAYLIST</h3><p>Add your Spotify or YouTube playlist link here so Cody can press play.</p><a class="primary" href="https://open.spotify.com/" target="_blank" rel="noopener">OPEN SPOTIFY</a><p class="small">Edit the link in index.html to your actual playlist URL.</p></div></section>
+
+<section id="memories"><div class="section-number">05 // PIT WALL ARCHIVE</div><h2>OUR MEMORIES</h2><p class="description">Add your favorite pictures and screenshots. For Cody to see them online, add the image files to the website folder before publishing.</p>
+<input class="upload" type="file" id="photos" accept="image/*" multiple>
+<div class="gallery" id="gallery-grid"><div class="tile">📸<br><br>FIRST MEMORY</div><div class="tile">🖤<br><br>FAVORITE MOMENT</div><div class="tile">🏁<br><br>ONE FOR THE ARCHIVE</div></div>
+<p class="small">The upload preview is local to the device and does not send pictures to the website.</p></section>
+
+<section id="secrets"><div class="section-number">06 // RESTRICTED ACCESS</div><h2>FIVE FILES. JUST FOR YOU.</h2><p class="description">Tap each file to open a little message from Ruby.</p>
+<div class="hearts"><button class="heart-button" onclick="reveal('s1')">FILE 01 ♥</button><button class="heart-button" onclick="reveal('s2')">FILE 02 ♥</button><button class="heart-button" onclick="reveal('s3')">FILE 03 ♥</button><button class="heart-button" onclick="reveal('s4')">FILE 04 ♥</button><button class="heart-button" onclick="reveal('s5')">FILE 05 ♥</button></div>
+<div id="s1" class="secret">You're my favorite person to talk to, even when we have absolutely nothing to talk about.</div>
+<div id="s2" class="secret">I love discovering the things you love and getting to know every little part of you.</div>
+<div id="s3" class="secret">You make ordinary days feel special. That's one of my favorite things about us.</div>
+<div id="s4" class="secret">I hope we make a million more memories, in games, on calls, and everywhere life takes us.</div>
+<div id="s5" class="secret">If I could choose who to make another year of memories with, I'd choose you.</div>
+</section>
+
+<section id="quiz"><div class="section-number">07 // TEAM KNOWLEDGE CHECK</div><h2>HOW WELL DO YOU KNOW US?</h2><div class="panel" style="text-align:center"><p id="question">What date did our story officially begin?</p><div class="quiz-options" id="options"></div><p id="quiz-result" style="color:#ff6478"></p><button class="primary" onclick="nextQuestion()">NEXT QUESTION</button></div></section>
+
+<section id="letter"><div class="section-number">08 // FINAL TRANSMISSION</div><h2>ONE LAST FILE</h2><p class="description">The most important part of this whole site.</p><button class="primary" onclick="reveal('final-letter')">DECRYPT FINAL MESSAGE ♥</button>
+<div id="final-letter" class="secret"><div class="letter"><h2 style="color:#ff304b">To my Cody,</h2>
+Happy one year, my love.<br><br>
+I don't think I could ever fully explain how much this past year has meant to me. Through all the conversations, laughter, memories, games, music, and everything in between, I'm so grateful our paths crossed.<br><br>
+I love getting to know you more, discovering the things you love, sharing music, and finding new reasons to appreciate you. Even with the distance between us, you've become such an important part of my life.<br><br>
+I made this little world because I wanted you to have something that was completely ours. Something you could revisit and remember how special this year has been.<br><br>
+Thank you for being part of my story. Here's to our first year and all the chapters still ahead.<br><br>
+<span style="color:#ff304b;font-size:22px;font-weight:bold">Forever yours, Ruby. ♥</span>
+</div></div></section>
+<footer><div style="font-size:30px">🏁</div><h2>RUBY <span>×</span> CODY</h2>EST. NOVEMBER 05, 2025<br><span>ONE TEAM. COUNTLESS MEMORIES.</span></footer>
+
+<script>
+const month=10,day=5;
+function updateCountdown(){
+ const now=new Date();let target=new Date(now.getFullYear(),month,day);
+ if(target<=now)target=new Date(now.getFullYear()+1,month,day);
+ const d=target-now;
+ document.getElementById('days').textContent=String(Math.floor(d/86400000)).padStart(3,'0');
+ document.getElementById('hours').textContent=String(Math.floor(d/3600000)%24).padStart(2,'0');
+ document.getElementById('minutes').textContent=String(Math.floor(d/60000)%60).padStart(2,'0');
+ document.getElementById('seconds').textContent=String(Math.floor(d/1000)%60).padStart(2,'0');
+ document.getElementById('countdown-title').textContent='NEXT ANNIVERSARY // '+target.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+}
+function updateTogether(){
+ const start=new Date(2025,10,5),now=new Date();let y=now.getFullYear()-start.getFullYear(),m=now.getMonth()-start.getMonth(),d=now.getDate()-start.getDate();
+ if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}if(m<0){y--;m+=12}
+ document.getElementById('together').textContent=`Together for ${y} years, ${m} months, and ${d} days.`;
+}
+function reveal(id){document.getElementById(id).classList.toggle('show')}
+updateCountdown();updateTogether();setInterval(updateCountdown,1000);setInterval(updateTogether,60000);
+document.getElementById('photos').addEventListener('change',e=>{
+ const grid=document.getElementById('gallery-grid');
+ [...e.target.files].forEach(file=>{if(!file.type.startsWith('image/'))return;const img=document.createElement('img');img.alt='A memory';img.src=URL.createObjectURL(file);grid.appendChild(img)});
+});
+const questions=[
+ {q:'What date did our story officially begin?',o:['October 5','November 5','December 5'],a:1},
+ {q:"Which is one of Cody's interests?",o:['NASCAR','Ballet','Gardening'],a:0},
+ {q:'Which band is on our shared music list?',o:['Slipknot','ABBA','The Wiggles'],a:0},
+ {q:'Who made this website?',o:['A random person','Ruby','A race car'],a:1}
+];let qi=0;
+function loadQuestion(){const q=questions[qi];document.getElementById('question').textContent=q.q;document.getElementById('quiz-result').textContent='';const box=document.getElementById('options');box.innerHTML='';q.o.forEach((v,i)=>{const b=document.createElement('button');b.textContent=v;b.onclick=()=>document.getElementById('quiz-result').textContent=i===q.a?'CORRECT // YOU KNOW US ♥':'NOT QUITE // TRY AGAIN';box.appendChild(b)})}
+function nextQuestion(){qi=(qi+1)%questions.length;loadQuestion()}loadQuestion();
+</script>
+</body>
+</html>
